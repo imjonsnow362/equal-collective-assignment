@@ -8,7 +8,7 @@ xray = XRay(pipeline_name="amazon_competitor_v1")
 xray.start()
 
 # Mock Data: 50 candidates
-candidates = [{"id": i, "name": f"Product_{i}", "price": random.randint(10, 100), "category": "electronics"} for i in range(50)]
+candidates = [{"id": i, "name": "Product_{}".format(i), "price": random.randint(10, 100), "category": "electronics"} for i in range(50)]
 candidates.append({"id": 999, "name": "Phone Case", "price": 15, "category": "accessories"}) # The "bad" match
 
 # --- Step 1: Search ---
@@ -40,7 +40,7 @@ xray.log(
 # --- Step 3: LLM Rank ---
 # Simulating an LLM picking the wrong item
 winner = filtered[-1] # It picks the Phone Case because it's the last one
-print(f"Winner selected: {winner['name']}")
+print("Winner selected: {}".format(winner['name']))
 
 xray.log(
     step_name="LLM Ranking",
