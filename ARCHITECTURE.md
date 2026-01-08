@@ -1,7 +1,7 @@
 # X-Ray Architecture
 
 ## 1. Overview
-X-Ray is a lightweight observability system designed for non-deterministic pipelines (AI/ML flows). Unlike traditional tracing (which focuses on latency/errors), X-Ray focuses on **Data Provenance** and **Decision Logic**.
+X-Ray is a lightweight observability system, X-Ray focuses on **Data Provenance** and **Decision Logic**.
 
 ## 2. System Design
 The system consists of three components:
